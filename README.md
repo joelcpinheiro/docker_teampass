@@ -1,18 +1,23 @@
 ## Teampass Passwords Manager on Docker
 
 1. Clone this project on you Docker Environment;
+
 2. Extract .zip file named 2.1.27.16.zip  and rename directory extracted(TeamPass-2.1.27.16) to teampass;
+
 3. Install docker-compose available on this link https://docs.docker.com/compose/install/;
+
 4. Access the directory of project downloaded to build Apache custom image on your docker environment and execute the command below:
 ```sh
 docker build -t apptpass:latest .
 ```
+
 **OBS**: Don't forget to update file docker-compose.yaml adjusting the password of MYSQL_ROOT_PASSWORD parameter and check wich is the IP of database container on extra_hosts parameter.
 
 5. After Apache custom image builded, execute stack using docker-compose.yaml file with this command:
 ```
 docker-compose -f docker-compose.yaml up -d
 ```
+
 6. After execute the docker-compose file, access the URL http://MyIP/teampass and set permissions on these directories on directory called **teampass**:
 
 ```sh
@@ -43,7 +48,7 @@ create database teampass;
 
 ```sh
 # Create user and set permissions
-grant all privileges on teampass.* to 'usrteam'@'%' identified by 'm3dRwvE7d9VQxxTV';
+grant all privileges on teampass.* to 'usrteam'@'%' identified by 'yourpassword';
 ```
 
 9. After installed, follow instructions as remove install directory, disable maintenance mode, create roles, directories and users to access your teampass.
