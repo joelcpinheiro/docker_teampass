@@ -11,7 +11,7 @@
 docker build -t apptpass:latest .
 ```
 
-**OBS**: Don't forget to update file docker-compose.yaml adjusting the password of MYSQL_ROOT_PASSWORD parameter and check wich is the IP of database container on extra_hosts parameter.
+**OBS**: Don't forget to update file docker-compose.yaml adjusting the password of MYSQL_ROOT_PASSWORD parameter and check wich if the IP of database container on extra_hosts parameter is correct after run docker-compose command. In this case the I had no another containers on this virtual machine.
 
 5. After Apache custom image builded, execute stack using docker-compose.yaml file with this command:
 ```
