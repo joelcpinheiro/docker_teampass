@@ -1,8 +1,8 @@
 version: '3.5'
 services:
 webserver:
-image: appteam
-container_name: appteam
+image: apptpass
+container_name: apptpass
 command: ["apachectl", "-D FOREGROUND"] 
 ports:
 - "80:80"
