@@ -9,7 +9,7 @@ RUN echo "ServerSignature Off" >> /etc/httpd/conf/httpd.conf && echo "ServerToke
 
 #COPY index.html /var/www/html/
 LABEL description="Teampass webserver"
-HEALTHCHECK --interval=1m --timeout=3s CMD curl -f http://localhost/ || exit 1
+#HEALTHCHECK --interval=1m --timeout=3s CMD curl -f http://localhost/ || exit 1
 
 VOLUME /var/www/html/
 EXPOSE 80
