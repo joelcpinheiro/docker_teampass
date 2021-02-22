@@ -2,18 +2,26 @@ version: '3.5'
 services:
    database:
      image: mariadb/server
-     container_name: dbmaria
+     container_name: mariadb
+     networks:
+       - teampassnet
      command: ["mysqld","--character-set-server=utf8","--collation-server=utf8_bin"]
      ports:
        - "3306:3306"
      environment:
-       - MARIADB_ROOT_PASSWORD= testeteste
+       MYSQL_ROOT_PASSWORD: testeteste
      volumes:
        - db_data:/var/lib/mysql
       
    webserver:
      depends_on:
-             - database
+       - database
+     links:
+       - database
+     networks:
+       - teampassnet
+     extra_hosts:
+       - "database:172.19.0.2"
      image: apptpass
      container_name: apptpass
      ports:
@@ -23,3 +31,6 @@ services:
      
 volumes:
     db_data: {}
+networks:
+  teampassnet:
+    driver: "bridge"
