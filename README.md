@@ -44,7 +44,7 @@ create database teampass;
 grant all privileges on teampass.* to 'usrteam'@'%' identified by 'm3dRwvE7d9VQxxTV';
 ```
 
-
+9. After installed, follow instructions as remove install directory, disable maintenance mode, create roles, directories and users to access your teampass.
 
 Take care of your passwords since today :)
 
