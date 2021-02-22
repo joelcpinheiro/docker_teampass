@@ -7,11 +7,13 @@
 ```sh
 docker build -t apptpass:latest .
 ```
+**OBS**: Don't forget to update file docker-compose.yaml adjusting the password of MYSQL_ROOT_PASSWORD parameter and check wich is the IP of database container on extra_hosts parameter.
+
 5. After Apache custom image builded, execute stack using docker-compose.yaml file with this command:
 ```
 docker-compose -f docker-compose.yaml up -d
 ```
-6. After run docker-compose file, access the URL http://MyIP/teampass and set permissions on these directories:
+6. After execute the docker-compose file, access the URL http://MyIP/teampass and set permissions on these directories on directory called **teampass**:
 
 ```sh
 chmod -R 0777 teampass/includes/config
