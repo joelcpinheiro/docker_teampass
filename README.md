@@ -25,10 +25,7 @@ chmod -R 0777 teampass/install
 chmod -R 0777 teampass/upload
 ```
 
-Acessing the URL http://MyIP/teampass, you could see the Installations Steps of Teampass
+Acessing the URL http://MyIP/teampass, you could see the Installations Steps of Teampass, proceed with installation and take care of your passwords since today :)
 
-
-
-16. Access http://dockerip/teampass
 
 Done.
