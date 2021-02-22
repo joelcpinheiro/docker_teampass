@@ -1,8 +1,8 @@
-## Teampass WebServer
+## Teampass Passwords Manager on Docker
 
 1. Clone this project on you Docker Environment;
-2. Extract zip file named 2.1.27.16.zip  and rename directory extracted(TeamPass-2.1.27.16) to teampass;
-3. Install docker-compose available on link https://docs.docker.com/compose/install/;
+2. Extract .zip file named 2.1.27.16.zip  and rename directory extracted(TeamPass-2.1.27.16) to teampass;
+3. Install docker-compose available on this link https://docs.docker.com/compose/install/;
 4. Access the directory of project downloaded to build Apache custom image on your docker environment and execute the command below:
 ```sh
 docker build -t apptpass:latest .
@@ -25,20 +25,26 @@ chmod -R 0777 teampass/install
 chmod -R 0777 teampass/upload
 ```
 
-7. Access mariadb container to create database and user to edit ```Database conection```on Installation steps
+7. Acessing the URL http://MyIP/teampass, you could see the Installations Steps of Teampass, proceed with installation;
+
+8. Access mariadb container to create database and user to edit ```Database conection``` on Installation steps:
 
 ```sh
-#Accessing database container
+# Accessing database container
 docker exec -it mariadb mysql
+```
+
+```sh
 # Creating Database
 create database teampass;
+```
+
+```sh
 # Create user and set permissions
 grant all privileges on teampass.* to 'usrteam'@'%' identified by 'm3dRwvE7d9VQxxTV';
-
 ```
 
 
-Acessing the URL http://MyIP/teampass, you could see the Installations Steps of Teampass, proceed with installation and take care of your passwords since today :)
 
+Take care of your passwords since today :)
 
-Done.
