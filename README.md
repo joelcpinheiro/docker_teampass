@@ -38,7 +38,14 @@ chmod -R 0777 teampass/upload
 
 7. Acessing the URL http://MyIP/teampass, you could see the Installations Steps of Teampass, proceed with installation;
 
-8. Access mariadb container to create database and user to edit ```Database conection``` on Installation steps:
+8. Check wich the IP of mariadb database container running this command:
+
+```sh
+docker exec -it apptpass cat /etc/hosts
+```
+He will be used on Installation steps.
+
+9. Access mariadb database container to create database and user to edit ```Database conection``` on Installation steps:
 
 ```sh
 # Accessing database container
@@ -55,7 +62,7 @@ create database teampass;
 grant all privileges on teampass.* to 'usrteam'@'%' identified by 'yourpassword';
 ```
 
-9. After installed, follow instructions as remove install directory, disable maintenance mode, create roles, directories and users to access your teampass.
+10. After installed, follow instructions as remove install directory, disable maintenance mode, create roles, directories and users to access your teampass.
 
 Take care of your passwords since today :)
 
