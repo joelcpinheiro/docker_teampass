@@ -21,14 +21,15 @@ docker-compose -f docker-compose.yaml up -d
 6. After execute the docker-compose file, access the URL http://MyIP/teampass and set permissions on these directories on directory called **teampass**:
 
 ```sh
-chmod -R 0777 teampass/includes/config
-chmod -R 0777 teampass/includes/avatars
-chmod -R 0777 teampass/includes/libraries/csrfp/libs
-chmod -R 0777 teampass/includes/libraries/csrfp/log
-chmod -R 0777 teampass/includes/libraries/csrfp/js
-chmod -R 0777 teampass/backups
-chmod -R 0777 teampass/files
-chmod -R 0777 teampass/install
+chmod -R 0777 teampass/includes/config &&
+chmod -R 0777 teampass/includes/avatars &&
+chmod -R 0777 teampass/includes/libraries/csrfp/libs &&
+chmod -R 0777 teampass/includes/libraries/csrfp/log &&
+chmod -R 0777 teampass/includes/libraries/csrfp/js &&
+chmod -R 0777 teampass/backups &&
+chmod -R 0777 teampass/files &&
+chmod -R 0777 teampass/install &&
+chmod -R 0777 teampass/includes &&
 chmod -R 0777 teampass/upload
 ```
 
