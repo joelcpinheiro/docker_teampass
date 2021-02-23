@@ -2,7 +2,10 @@
 
 1. Clone this project on you Docker Environment;
 
-2. Extract .zip file named 2.1.27.16.zip  and rename directory extracted(TeamPass-2.1.27.16) to teampass;
+2. Extract .zip file named 2.1.27.16.zip  and move files of this directory extracted(TeamPass-2.1.27.16) to teampass directory:
+```sh
+mv TeamPass-2.1.27.16/* teampass/
+```
 
 3. Install docker-compose available on this link https://docs.docker.com/compose/install/;
 
