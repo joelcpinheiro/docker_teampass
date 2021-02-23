@@ -1,5 +1,9 @@
 ## Teampass Passwords Manager on Docker
 
+Should you have one question for me, I know (why you don't used the teampass image present on docker hub?). Because I prefer use the last updated images and custom.
+
+I suppose that you have installed docker and git on your environment, isn't?! So, let's go ahead!
+
 1. Clone this project on you Docker Environment;
 
 2. Extract .zip file named 2.1.27.16.zip  and move files of this directory extracted(TeamPass-2.1.27.16) to teampass directory:
